@@ -18,8 +18,13 @@
                         {%csrf_token%}
 
                         <div class="form-group m-3">
+                            <label>Select a Location {{photo.location}}</label>
+                            <input name="text" placeholder="Enter a location" class="form-control">
+                        </div>
+
+                        <div class="form-group m-3">
                             <label>Description</label>
-                            <input name="description" placeholder="Enter a Description" class="form-control">
+                            <input name="description" placeholder="Enter a description" class="form-control">
                         </div>
                           <div class="form-group m-3">
                             <label>Select a Category</label>
