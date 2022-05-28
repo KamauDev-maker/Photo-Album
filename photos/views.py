@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from . models import Category,Photo
+from . models import Category,Photo,Location
 
 # Create your views here.
 
@@ -9,16 +9,21 @@ def gallery(request):
         photos = Photo.objects.all()
     else:
         photos = Photo.objects.filter(category__name=category)   
-    
-    
+        
+    locations = Location.objects.all()
     categories = Category.objects.all()
     
-    context = {'categories':categories,'photos':photos}
+    context = {'categories':categories,'photos':photos,'locations':locations}
     return render(request, 'photos/gallery.html',context)
 
 def viewPhoto(request,pk):
     photo = Photo.objects.get(id=pk)
     return render(request, 'photos/photo.html',{'photo':photo})
+
+def location(request,pk):
+    
+    location = Location.objects.get(id=pk)
+    return render (request,'photos/location.html',{'location':location})
 
 def addPhoto(request):
     
