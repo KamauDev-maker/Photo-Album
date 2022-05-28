@@ -16,14 +16,14 @@ class LocationTest(TestCase):
         '''
         self.nairobi.save_location()
         locations = Location.objects.all()
-        self.assertEqual(len(locations),2)
+        self.assertEqual(len(locations),1)
         
     def test_display_locations(self):
         '''
         This tests whether the display location function is getting the locations from the db
         '''
         self.nairobi.save_location()
-        self.assertEqual(len(Location.display_all_locations()), 2)    
+        self.assertEqual(len(Location.display_all_locations()),1)    
         
 class CategoryTest(TestCase):
     def setUp(self):
