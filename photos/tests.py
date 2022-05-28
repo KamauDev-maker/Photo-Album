@@ -15,7 +15,6 @@ class LocationTest(TestCase):
         test whether new locations are added to the db 
         '''
         self.nairobi.save_location()
-        self.tokyo.save_location()
         locations = Location.objects.all()
         self.assertEqual(len(locations),2)
         
@@ -24,7 +23,6 @@ class LocationTest(TestCase):
         This tests whether the display location function is getting the locations from the db
         '''
         self.nairobi.save_location()
-        self.tokyo.save_location()
         self.assertEqual(len(Location.display_all_locations()), 2)    
         
 class CategoryTest(TestCase):
@@ -40,9 +38,9 @@ class CategoryTest(TestCase):
         test whether new locations are added to the db 
         '''
         self.nature.save_category()
-        self.animals.save_category()
+        self.travel.save_category()
         categories = Category.objects.all()
-        self.assertTrue(len(categories) == 2)
+        self.assertTrue(len(categories),2)
         
 class PhotoTest(TestCase):
     def setUp(self):
