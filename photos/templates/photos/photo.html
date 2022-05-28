@@ -22,7 +22,7 @@
                 <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
                 <div style="height:90vh;">
                     <img src="{{ photo.image.url }}" alt="">
-                    <p>{{ photo.description }}</p>
+                    <p>{{ photo.description }} {{location.name}}</p>
                 </div>
             </div>
 

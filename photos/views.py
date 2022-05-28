@@ -23,7 +23,7 @@ def viewPhoto(request,pk):
 def location(request,pk):
     
     location = Location.objects.get(id=pk)
-    return render (request,'photos/location.html',{'location':location})
+    return render (request,'photos/photo.html',{'location':location})
 
 def addPhoto(request):
     
