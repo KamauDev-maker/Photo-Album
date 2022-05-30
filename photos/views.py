@@ -23,6 +23,14 @@ def viewPhoto(request,pk):
 def location(request,pk):
     
     location = Location.objects.get(id=pk)
+    
+    location = request.GET.get('location')
+    if location == None:
+        images = Image.get_images()
+    else:
+        images = Image.objects.filter(location__name=category)
+        print(images)
+        
     return render (request,'photos/photo.html',{'location':location})
 
 def addPhoto(request):
