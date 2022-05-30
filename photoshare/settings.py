@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
+DEBUG = True
 
 
 
@@ -87,11 +87,15 @@ WSGI_APPLICATION = 'photoshare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME':'d9g5eim3uv9c00',
+        'HOST': 'ec2-34-231-221-151.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'fgexhbkejifxvp',
+        'PASSWORD': '46647a4f688290cb9c49703215d1dc6f1a43d588f31df7df846bee448935abe6',
     }
 }
+
+
 
 
 ALLOWED_HOSTS = []
