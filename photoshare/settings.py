@@ -98,7 +98,7 @@ DATABASES = {
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['photo2030.herokuapp.com','127.0.0.1']
 
 
 # Password validation
