@@ -14,6 +14,17 @@ from pathlib import Path
 
 from decouple import config
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+cloudinary.config(
+    cloud_name = "di0sudw9s",
+    api_key = "869886819234666",
+    api_secret = "AOcg-zI9l1jbG5QtUHSPCjdLGtI"
+    
+)
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -44,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'photos.apps.PhotosConfig',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
